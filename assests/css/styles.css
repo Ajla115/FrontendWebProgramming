@@ -1,52 +1,95 @@
-h4 {
-    color:blue;
-    background-color:coral;
-}
-
-.city { 
-    color: green;
+body {
+    background-color: lightblue;
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  
+  p {
+    font-family: verdana;
+    font-size: 20px;
+    /*ovdje kod 20px, ovo se pise sastavljeno, a ne odvojeno kao 20 px!*/
     background-color: yellow;
-} /* ovo je za class*/
- 
-#city{
-    color: blue;
-} /*ovo je za id, id has higher property than class*/
+  }
 
-/*sto se tice prioriteta, 
-na vrhu je inline styling,
-           2. je onaj u headeru
-           3. je external css file*/
-a:link {
-    color: green;
-    background-color: transparent;
-    text-decoration: none;
+  div { /*sta znaci ovaj div*/
+    background-color: lightgoldenrodyellow;
+  }
+
+  h3 {
+    background-image: url("../pool_water.jpg");
+    background-attachment: scroll;
+  }
+
+  p.three {
+    border-style: solid;
+    border-width: 25px 10px 4px 35px; /* 25px top, 10px right, 4px bottom and 35px left */
+    border-color: red green blue yellow;
   }
   
-a:visited {
-    color: pink;
-    background-color: transparent;
-    text-decoration: none;
+  /*types of borders*/
+  p.one {
+    border-style: dotted solid double dashed;
   }
   
-a:hover {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
+  /* Three values */
+  p.two {
+    border-style: dotted solid double;
   }
   
-a:active {
-    color: yellow;
-    background-color: transparent;
-    text-decoration: underline;
-}
+  /* Two values */
+  p.four {
+    border-style: dotted solid;
+  }
+  
+  /* One value */
+  p.five {
+    border-style: dotted;
+  }
+    
+  p.six {
+    border-bottom: 6px solid red;
+  }
 
-table th, tr, td {
-  border : solid black;
-}
-/*ovdje ce svi imati crni okvir*/
+  p.margins {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+  }
 
-table tr #table-cell{
-  color:red;
-} /*ovdje znaci da udemo u table, trazimo row koji ima ovaj id i samo taj ce imati to nesto crveno, 
-a ostali ostaju kao u ovoj super klasi, i obratiti paznju da ovdje nema zareza*/
+  /*p.margins  { ovo je skracena verzija
+  margin: 25px 50px 75px 100px;
+  }
+  margin: auto znaci da ce biti center horizontally
+*/ 
+  
+/*The CSS padding properties are used to generate space around an element's content, inside of any defined borders.Padding je prostor od teksta 
+do okvira tog tektsa, i on ne moze biti auto ali se msm moze inherit od parent class kao sto je div npr. Margins je prostor od okvira teksta do kraja stranice, moze biti auto sto znaci
+centered horizontally i takoder se moz naslijediti od div class.*/ 
+div {
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+  }
 
+  /*Here, the <div> element is given a width of 300px. However, the actual width of the <div> element will be 350px (300px + 25px of left padding + 25px of right padding):
+  div {
+    width: 300px;
+    padding: 25px;
+  }*/
+
+  /*Use the box-sizing property to keep the width at 300px, no matter the amount of padding:
+  div {
+  width: 300px;
+  padding: 25px;
+  box-sizing: border-box;
+}*/
+
+  /*All the styles in a page will "cascade" into a new "virtual" style sheet by the following rules,
+   where number one has the highest priority:
+   Inline style (inside an HTML element)
+   External and internal style sheets (in the head section), ako je external definisan prije internal on ce se koristiti ili vice versa*/

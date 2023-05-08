@@ -1,0 +1,199 @@
+<!DOCTYPE html> <!--HTML doc mora imati ovo na pocetku jer time se odredi da je vrste html-->
+<html lang="en-US"> <!--ovime zapocinje html doc, isto kao sto je za php islo ono <?php, ovo eng-US oznacava koja vrsta eng ce se koristiti na stranici-->
+<head>
+<title>HTML Tutorial</title>
+<!--Ovo su zadaci sa HTML Tutorijala sa WW3Schools-->
+<link rel="stylesheet" href="assests/css/styles.css"> <!--ovo je link za external styleSheet-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+  h2   {
+      color: blue;
+      padding:  30px;
+      }
+  h3  {
+    color: red;
+    margin: 50px;
+      }
+      body {
+  background-image: url('pool_water.png');
+} 
+</style><!--ovako bi se dodala slika na cijelu pozadinu, ali posto ima dole kod body vec background-color ovo je overriden-->
+<!-- ovaj style ovdje definise izgled svih h2 i h3 koje se nalaze na ovoj stranici, npr.-->
+
+</head>
+<body style="background-color:rgb(226, 235, 236);">  <!--sve sto se nalazi u body je upravo ono sto ce biti videno-->
+<div class="row" style = "color:red; font-size: 35px;">
+  <div class="col-lg-6 col-md-12">col 1</div> <!--create a column which will take size of 6 columns from bootstrap basics, or take size of 12 middle columns depending on the page space-->
+  <div class="col-lg-6 col-md-12">col 2</div>
+  <div class="col-lg-6 col-md-12">col 3</div> <!--this one will go below bc we only have 12 rows-->
+</div>
+</div>
+<!--ovaj bootstrap ovdje sa ovo "col-lg-6 col-md-12" je nesto zbog cega stranica postane responsive i ne trebaju nam seperate css fajls za svaki uredaj-->
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+
+
+<a href="https://www.w3schools.com">WW3 Schools Homepage</a> <div></div>
+<img src="butterfly.jpg" alt="Butterfly" width="104" height="142"><br>
+<!--links uvijek pocinju sa ovo a href na pocetku-->
+
+<!--HTML is not case sensitive, but it is better to always use lower case letters,
+    and br for line break, does not have closing part like /br like /body and /html have-->
+
+<!--All HTML elements can have attributes
+Attributes provide additional information about elements
+Attributes are always specified in the start tag
+Attributes usually come in name/value pairs like: name="value"-->
+
+<!--There are two ways to specify the URL in the src attribute:
+
+1. Absolute URL - Links to an external image that is hosted on another website. Example: src="https://www.w3schools.com/images/img_girl.jpg".
+Notes: External images might be under copyright. If you do not get permission to use it, you may be in violation of copyright laws.
+In addition, you cannot control external images; it can suddenly be removed or changed.
+2. Relative URL - Links to an image that is hosted within the website. Here, the URL does not include the domain name.
+If the URL begins without a slash, it will be relative to the current page. Example: src="img_girl.jpg".
+If the URL begins with a slash, it will be relative to the domain. Example: src="/images/img_girl.jpg".
+Tip: It is almost always best to use relative URLs. They will not break if you change domain.-->
+
+<!--The required alt attribute for the <img> tag specifies an alternate text for an image, if the image for some reason cannot 
+be displayed.This can be due to a slow connection, or an error in the src attribute, or if the user uses a screen reader.-->
+
+<img src="img_typo.jpg" alt="Girl with a jacket" width = "500 px" height = "500 px"><br>
+<img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;"><br>
+<!--drugi nacin definisanja ovih atributa, da smo def style za img incline or external on bi imao prednost u odnosu na ovo width kod slike 1,
+ali ne bi imao prednosti u odnosu na ovo style kod slike 2-->
+
+<!--the image can also be a clickable link-->
+<a href="https://www.youtube.com/watch?v=gz-SCxj8rds&t=61s">
+  <img title="Clickable link" src="Butterfly.jpg" alt="Butterfly" style="width:42px;height:42px;">
+</a><br>
+
+<p><img src="france-eiffel-tower-paris.jpg" alt="france-eiffel-tower-paris" style="float:right;width:42px;height:42px;">
+  The image will float to the right of the text.</p>
+  <!--kod mene slika doesn't float, vec je samo na desnoj strani-->
+
+<p title="I'm a tooltip">This is a paragraph.</p><!--ovo title znaci da ce se ovaj text pojaviti kad we hover with the mouse over this text-->
+<p style="color:red;">This is a red paragraph.</p>
+
+<p style="background-image: url('pool_water.jpg');">I can't wait for the summer.</p>
+<!--this background picture can be added to the whole screen or perhaps to all same elemnts through incline or external css file-->
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+<h1>This is heading 1</h1>
+<p>This is some text.</p>
+<hr> <!--hr adds a horizontal line break-->
+<h2>This is heading 2</h2>
+<p>This is some other text.</p>
+<hr>
+
+<pre>
+  My Bonnie lies over the ocean.
+
+  My Bonnie lies over the sea.
+
+  My Bonnie lies over the ocean.
+
+  Oh, bring back my Bonnie to me.
+</pre>
+
+<!--Kada se koristi HTML style, then this is the structure <tagname style="property:value; eno primjer za background color change">-->
+
+<h1 style="background-color:orange;color:blue;font-family: Arial;font-size:150%;text-align: center;">This is a heading</h1>
+<p style="background-color:violet;color:aqua;font-family: Courier;font-size:250%;text-align: center;">This is a paragraph.</p>
+
+<h1 style="border:2px solid Tomato;">Hello World</h1>
+<h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+<h1 style="border:2px solid Violet;">Hello World</h1>
+
+
+<b>This text is bold</b><br> <!--bold and strong do the same thing-->
+<strong>This text is important!</strong><br>
+<i>This text is italic</i><br>
+<em>This text is emphasized</em><br>
+<small>This is some smaller text.</small><br>
+<p>Do not forget to buy <mark>milk</mark> today.</p>
+<p>My favorite color is <del>blue</del> red.</p>
+<p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
+<p>This is <sub>subscripted</sub> text.</p>
+<p>This is <sup>superscripted</sup> text.</p>
+
+<p>Here is a quote from WWF's website:</p>
+<blockquote cite="http://www.worldwildlife.org/who/index.html">
+For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which they live.
+</blockquote>
+
+<p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+<!--this is used for short quotes-->
+
+<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+<bdo dir="rtl">This text will be written from right to left</bdo>
+
+<p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+<!--ovo sto je u cite, bude u italic-->
+
+<address>
+  Written by John Doe.<br>
+  Visit us at:<br>
+  Example.com<br>
+  Box 564, Disneyland<br>
+  USA
+</address>
+<!--ovdje u address sve bude u italic-->
+
+<a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>
+
+<h2 id="C4">Chapter 4</h2>
+<a href="#C4">Jump to Chapter 4</a>
+<!--To create a bookmark - first create the bookmark, then add a link to it.ID is used to create the bookmark.
+When the link is clicked, the page will scroll down or up to the location with the bookmark, samo ja moram jos namjestiti kako da skoci-->
+
+<hr>
+<p>Now, I will focus on the second part of lecture from CSS and Bootstrap</p>
+
+<h2 class = "city">Paris</h2>
+<p>Paris is the capital of France.</p>
+
+<h2 class = "city" id = "city">Tokyo</h2>
+<p>Tokyo is the capital of Japan.</p>
+
+<table>
+  <tr>
+    <th>Company</th> 
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td id = "table-cell">Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table>
+
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+
+<button type="button" class="btn btn-link">Link</button>
+
+
+
+</body>
+</html>
