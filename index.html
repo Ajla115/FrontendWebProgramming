@@ -1,15 +1,79 @@
 <!DOCTYPE html>
 <!--Ovo je CSS Tutorial 2-->
 <html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
 <title>CSS TUT 2</title> <!--ovo je naziv taba-->
+<!--To use multiple Google fonts, just separate the font names with a pipe character (|), like this:-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+<link rel="stylesheet" href="assests/css/styles.css">
+<!--Use the CSS property float:left to display a list horizontally-->
 <style>
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+h1.a {
+  font-family: "Audiowide", sans-serif;
+}
+
+h1.b {
+  font-family: "Sofia", sans-serif;
+}
+
+h1.c {
+  font-family: "Trirong", serif;
+}
+
+h1 {
+  text-shadow: 0 0 3px #FF0000;
+}
+
+h2 {
+  text-shadow: 2px 2px 5px red;
+}
   
 p {
   margin: 30px;
   border: 1px solid black;
   outline: 1px solid red;
   outline-offset: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+p.a {
+  text-align-last: right;
+}
+
+p.b {
+  text-align-last: center;
+}
+
+p.c {
+  text-align-last: justify;
 }
   p.ex1 {
     border: 2px solid black;
@@ -47,10 +111,88 @@ p {
   <!--The outline-offset property adds space between an outline and the edge/border of an element.
      The space between an element and its outline is transparent.-->
 
-     <h2>The outline-offset Property</h2>
+<h2>The outline-offset Property</h2>
 
 <p>This paragraph has an outline 15px outside the border edge.</p>
-  
+
+<h1>The text-align-last Property</h1>
+
+<h2>text-align-last: right:</h2>
+<p class="a">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.</p>
+
+<h2>text-align-last: center:</h2>
+<p class="b">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.</p>
+
+<h2>text-align-last: justify:</h2>
+<p class="c">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.</p>
+
+<!--The text-align-last property specifies how to align the last line of a text.-->
+
+<!--All links in HTML are underlined by default. Sometimes you see that links are styled with no underline. The text-decoration: none; is used to remove the underline from links, like this:-->
+
+<h1>Using text-decoration: none</h1>
+
+<p>A link with no underline: <a href="https://www.w3schools.com">W3Schools.com</a></p>
+
+<h1>Only blur without vertical ad horizontal shadow.</h1>
+<h2>Vertical, horizpntal shadow and blur.</h2>
+
+<!--The text size can be set with a vw unit, which means the "viewport width".
+
+That way the text size will follow the size of the browser window:-->
+
+
+<h1 style="font-size:10vw;">Responsive Text</h1>
+
+<p style="font-size:5vw;">Resize the browser window to see how the text size scales.</p>
+
+<p style="font-size:5vw;">Use the "vw" unit when sizing the text. 10vw will set the size to 10% of the viewport width.</p>
+
+<p>Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.</p>
+
+<h1 class="a">Audiowide Font</h1>
+
+<h1 class="b">Sofia Font</h1>
+
+<h1 class="c">Trirong Font</h1>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+<!--Use the CSS property float:left to display a list horizontally ovo je bitno i ovo ima gore u styles-->
+
+<dl>
+  <dt>Coffee</dt>
+  <dd>- black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>- white cold drink</dd>
+</dl>
+
+<!--dl je description list, dt je description tag, a dd je description data-->
+<p>This is an inline span <span style="border: 1px solid black">Hello World</span> element inside a paragraph.</p>
+
+<p>The SPAN element is an inline element, and will not start on a new line and only takes up as much width as necessary.</p>
+
+<div class="city">
+  <h2>London</h2>
+  <p>London is the capital of England.</p>
+</div>
+
+<div class="city">
+  <h2>Paris</h2>
+  <p>Paris is the capital of France.</p>
+</div>
+
+<div class="city">
+  <h2>Tokyo</h2>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<h1 id="myHeader">My Header</h1>
+
   </body>
   </html>
 
