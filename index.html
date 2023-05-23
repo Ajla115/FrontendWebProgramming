@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
 <link rel="stylesheet" href="assests/css/styles.css">
 <!--Use the CSS property float:left to display a list horizontally-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> <!--ovo je da dowloadujemo jquery biblioteku-->
+<script> src="assests/js/initial.js"</script>
 <style>
 
 ul {
@@ -192,6 +194,39 @@ That way the text size will follow the size of the browser window:-->
 </div>
 
 <h1 id="myHeader">My Header</h1>
+<button type="button" onclick="display('Primary')" class = "btn btn-primary">Primary</button>
+<button type="button" onclick="display('Secondary')" class = "btn btn-secondary">Secondary</button>
+<button type="button" onclick="greeting('Success')" class = "btn btn-success">Success</button>
+<button type="button" onclick="greeting('Danger')" class = "btn btn-danger">Danger</button>
+
+
+<p id = "demo"></p>
+<div id="cars"></div>
+
+
+
+<script>
+//alert("Hello")
+//hello(); //ovako se poziva JS funkcija unutar html fajla
+let list = '<ul>';
+for(var i =0; i <cars.length; i++){
+    list+='<li>' + cars[i] + '</li.' //ovo += znaci appends
+}
+list += '</ul>';
+console.log(list);
+document.getElementById('cars').innerHTML = list; 
+
+let json_text = '{ "employees" : [' + '{ "firstName" : "John", "lastName" : "Doe"},' +
+ '{ "firstName" : "Clair", "lastName" : "Smith"},' + '{ "firstName" : "Anna", "lastName" : "Maria" }]}';
+//ovdje paziti kod ovih ' ' i , jer jedino tu mogu napraviti neku gresku, sitno a jako vazno
+ console.log(json_text);
+ const obj = JSON.parse(json_text); //ovako se pretvara u objekati 
+ console.log(obj); //ovo nam kao u postmanu printa array sa ovim vrijednostima
+ console.log(obj.employees.length); 
+ for(var i = 0; i < obj.employees.length; i++){
+  console.log(obj.employees[i].firstName); //ovo firstName treba biti napisano isto kao sto je i gore napisano kao atribut u employees
+ }
+</script>
 
   </body>
   </html>
